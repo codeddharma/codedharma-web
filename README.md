@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# codedharma.com
 
-## Getting Started
+The CodeDharma website: Next.js 16 (App Router), Tailwind CSS v4, TypeScript, with self-hosted fonts (Young Serif, IBM Plex Sans/Mono).
 
-First, run the development server:
+- All copy: `src/content/site.ts`
+- Brand tokens: `src/app/globals.css` (`@theme`)
+- Logo: `src/components/Logo.tsx`, favicon `src/app/icon.svg`
+- Contact form: `src/components/ContactForm.tsx` → `src/app/api/contact/route.ts` (sends through Resend)
 
+## Run locally
 ```bash
+npm install
+cp .env.example .env.local   # add RESEND_API_KEY
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy (Vercel)
+1. Push this folder to a GitHub repo and import it in Vercel. The defaults work as-is.
+2. Add the env vars from `.env.example` in Vercel → Settings → Environment Variables.
+3. Vercel → Domains → add `codedharma.com` and `www.codedharma.com`, then set the DNS records Vercel shows you.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Email: hello@codedharma.com → Gmail (Cloudflare Email Routing)
+1. Move codedharma.com's DNS to Cloudflare (free plan): add the site and change the nameservers at your registrar.
+2. Cloudflare → Email → Email Routing → Enable. Cloudflare adds its MX and SPF records for you.
+3. Add a custom address `hello@codedharma.com` → your Gmail, then verify the destination.
+4. Replying as hello@: Gmail → Settings → Accounts → "Send mail as" → add hello@codedharma.com, SMTP `smtp.gmail.com:587` with a Google App Password.
+5. SPF: keep a single TXT record that includes Cloudflare, Google and Resend (Resend shows its exact include when you verify the domain), ending in `~all`.
+6. DMARC: add TXT `_dmarc` → `v=DMARC1; p=none; rua=mailto:hello@codedharma.com`.
+   Note: Gmail "send as" signs mail as gmail.com, so some replies may land in spam. If that happens, move to Google Workspace or Zoho.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact form (Resend)
+1. Create a free Resend account and add `codedharma.com` as a domain. Add the DKIM/SPF records it shows (in Cloudflare DNS).
+2. Create an API key → `RESEND_API_KEY` in Vercel.
+3. `CONTACT_FROM` must use the verified domain, e.g. `CodeDharma Website <website@codedharma.com>`.
