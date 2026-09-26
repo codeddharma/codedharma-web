@@ -25,7 +25,7 @@ export default function Page() {
       </Section>
       <Section className="pt-0 md:pt-0">
         <article className="grid gap-8 rounded-2xl bg-oxide p-8 text-patina md:grid-cols-[auto_1fr] md:p-12">
-          <span className="label h-fit rounded-full bg-bronze-deep px-3 py-1.5 text-white">In progress</span>
+          <span className="label h-fit w-fit whitespace-nowrap rounded-full bg-bronze-deep px-3 py-1.5 text-white">In progress</span>
           <div className="space-y-4">
             <p className="label text-verdigris">Experiment 001</p>
             <h2 className="font-serif text-3xl md:text-4xl"><Lines text="Being built.|Revealing soon." /></h2>
