@@ -10,7 +10,7 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="Free discovery call"
-        title="Tell us what's slowing you down."
+        title="Tell us what's|slowing you down."
         intro="About 30 minutes of questions about how your business runs. No pitch deck and no obligation. If we see something worth doing, we'll tell you what we'd look at first."
       />
       <Section className="pt-4 md:pt-6">

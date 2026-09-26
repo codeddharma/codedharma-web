@@ -8,6 +8,8 @@
   --color-verdigris: #5E9C8F;
   --color-verdigris-deep: #3F7A6E;
   --color-bronze: #B0773F;
+  --color-bronze-deep: #9A6534;   /* bronze surfaces that carry light text (white 4.9:1) */
+  --color-bronze-darker: #8C5A2C;
   --color-rust: #B4553A;
   --color-stone: #7C8985;
   --color-line: #CFDAD4;

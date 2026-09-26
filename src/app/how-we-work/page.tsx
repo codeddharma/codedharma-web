@@ -20,7 +20,7 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="How we work"
-        title="Discovery first. Technology second."
+        title="Discovery first.|Technology second."
         intro="The right solution can't always be found in a requirements document or a short call. We need to understand the business before we decide what technology it needs."
       />
       <Section className="pt-4 md:pt-6"><MethodRail /></Section>

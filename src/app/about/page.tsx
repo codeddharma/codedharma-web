@@ -17,7 +17,7 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="About CodeDharma"
-        title="Technology should give every business a chance to move forward."
+        title="Technology should give every business|a chance to move forward."
         intro="Big companies have teams to find and fix their operational problems. Most small and growing businesses don't. CodeDharma exists to close that gap, by understanding the business first and then applying the right technology, or none."
       />
       <Section className="pt-6 md:pt-10">

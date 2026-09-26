@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mark } from "@/components/Logo";
-import { ButtonLink, CtaBand, Heading, MethodRail, Section } from "@/components/Blocks";
+import { ButtonLink, CtaBand, Heading, Lines, MethodRail, Section } from "@/components/Blocks";
 import { industries, services, signs, site } from "@/content/site";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div className="space-y-7">
             <p className="label text-verdigris-deep">{site.category}</p>
-            <h1 className="font-serif text-5xl leading-[1.04] md:text-7xl">{site.tagline}</h1>
+            <h1 className="font-serif text-5xl leading-[1.04] md:text-7xl"><Lines text="Technology,|guided by purpose." /></h1>
             <p className="max-w-xl text-lg leading-relaxed text-oxide-80 md:text-xl">
               {site.descriptor} We spend time where the work happens, find what&apos;s slowing you down, and build only what moves you forward.
             </p>
@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* Problem */}
       <Section className="border-t border-line bg-patina/60">
-        <Heading eyebrow="The everyday signs" title="Most businesses don't need more software. They need less re-typing." />
+        <Heading eyebrow="The everyday signs" title="Most businesses don't need more software.|They need less re-typing." />
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {signs.map((s) => (
             <li key={s} className="rounded-xl border border-line bg-mist p-5 text-[17px] leading-snug">{s}</li>
@@ -53,7 +53,7 @@ export default function Home() {
       <Section>
         <Heading
           eyebrow="How we work"
-          title="We understand the business before we choose the technology."
+          title="We understand the business|before we choose the technology."
           intro="Every engagement follows the same eight steps. The first two happen where your work does, with the people who do it."
         />
         <div className="mt-12"><MethodRail detailed /></div>
@@ -62,7 +62,7 @@ export default function Home() {
 
       {/* Services */}
       <Section className="border-t border-line">
-        <Heading eyebrow="What we build" title="Whatever the problem needs. Nothing it doesn't." />
+        <Heading eyebrow="What we build" title="Whatever the problem needs.|Nothing it doesn't." />
         <div className="mt-12 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <Link key={s.slug} href={`/what-we-build#${s.slug}`} className="group flex flex-col gap-3 bg-mist p-6 transition-colors hover:bg-white">
@@ -77,7 +77,7 @@ export default function Home() {
       {/* Honesty */}
       <section className="bg-oxide px-5 py-20 text-patina md:py-28">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
-          <Heading dark eyebrow="Honest over impressive" title="Sometimes the right answer is to build nothing." />
+          <Heading dark eyebrow="Honest over impressive" title="Sometimes the right answer|is to build nothing." />
           <div className="space-y-6 text-lg leading-relaxed text-patina/80">
             <p>If an existing tool solves your problem, we&apos;ll tell you. If a process change fixes it, we&apos;ll show you. We respect your goal, and we&apos;ll be honest when the solution needs rethinking.</p>
             <p>When we do build, you own it. Everything is documented, so your team is stronger and never locked in to us.</p>
@@ -91,17 +91,17 @@ export default function Home() {
           <div className="space-y-6">
             <Heading
               eyebrow="CodeDharma Labs"
-              title="One problem, many businesses, one shared solution."
+              title="One problem, many businesses,|one shared solution."
               intro="When we find a problem that many businesses in an industry share, we build one product they can all use, so no single business carries the full cost."
             />
             <div className="flex items-center gap-3 rounded-xl border border-dashed border-stone p-4">
-              <span className="label rounded-full bg-bronze px-2.5 py-1 text-oxide">In progress</span>
+              <span className="label rounded-full bg-bronze-deep px-2.5 py-1 text-white">In progress</span>
               <span className="text-[15px]">Experiment 001 is being built. Revealing soon.</span>
             </div>
             <ButtonLink href="/labs" variant="ghost">Visit Labs</ButtonLink>
           </div>
           <div className="space-y-6">
-            <Heading eyebrow="Where we're looking" title="We follow problems, not industries." intro="Right now we're talking to businesses in:" />
+            <Heading eyebrow="Where we're looking" title="We follow problems,|not industries." intro="Right now we're talking to businesses in:" />
             <ul className="flex flex-wrap gap-2">
               {industries.map((i) => (
                 <li key={i} className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[15px]">{i}</li>
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="grid items-center gap-12 lg:grid-cols-[auto_1fr]">
           <Mark className="h-40 w-auto md:h-52" ink="#1D2322" />
           <div className="space-y-5">
-            <Heading eyebrow="Why CodeDharma" title="Code is what we build with. Dharma is the direction." />
+            <Heading eyebrow="Why CodeDharma" title="Code is what we build with.|Dharma is the direction." />
             <p className="max-w-2xl text-lg leading-relaxed text-oxide-80">
               Our mark draws on Karna from the Mahabharata: the Vijaya bow he mastered, and the armour and earrings he was born with. For us they stand for skill, responsibility, and the capability every business already has.
             </p>

@@ -9,7 +9,7 @@ export default function Page() {
     <>
       <PageHero
         eyebrow="What we build"
-        title="Whatever the problem needs. Nothing it doesn't."
+        title="Whatever the problem needs.|Nothing it doesn't."
         intro="We decide what to build only after discovery. These are the kinds of work that usually come out of it."
       />
       <Section className="pt-6 md:pt-8">
