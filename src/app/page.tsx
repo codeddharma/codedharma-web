@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mark } from "@/components/Logo";
+import { ProductCard } from "@/components/ProductCard";
 import { ButtonLink, CtaBand, Heading, MethodRail, Section } from "@/components/Blocks";
 import { industries, services, signs, site } from "@/content/site";
 
@@ -98,10 +99,7 @@ export default function Home() {
               title="One problem, many businesses,|one shared solution."
               intro="When we find a problem that many businesses in an industry share, we build one product they can all use, so no single business carries the full cost."
             />
-            <div className="flex items-center gap-3 rounded-xl border border-dashed border-stone p-4">
-              <span className="label shrink-0 whitespace-nowrap rounded-full bg-bronze-deep px-2.5 py-1 text-white">In progress</span>
-              <span className="text-[15px]">Experiment 001 is being built. Revealing soon.</span>
-            </div>
+            <ProductCard compact />
             <ButtonLink href="/labs" variant="ghost">Visit Labs</ButtonLink>
           </div>
           <div className="space-y-6">

@@ -124,3 +124,15 @@ export const faqs = [
     a: "No. We work with businesses of any size. What matters is that there's a real operational problem technology can improve.",
   },
 ];
+
+export const products = [
+  {
+    name: "Splizo",
+    url: "https://splizo.codedharma.com",
+    status: "Waitlist open",
+    tagline: "Every rupee, tracked and understood.",
+    description: "One shared ledger for the whole household. Import bank and UPI statements, split what's shared, and track family loans, without a spreadsheet in sight.",
+    points: ["Shared household tracking", "Smart auto-categorisation", "Family lending ledger"],
+    note: "Built for one household first.",
+  },
+];

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ButtonLink, Lines, PageHero, Section } from "@/components/Blocks";
+import { ProductCard } from "@/components/ProductCard";
 
 export const metadata: Metadata = { title: "Labs", description: "CodeDharma Labs turns problems that many businesses share into products they can all use." };
 
@@ -24,14 +25,14 @@ export default function Page() {
         </ol>
       </Section>
       <Section className="pt-0 md:pt-0">
-        <article className="grid gap-8 rounded-2xl bg-oxide p-8 text-patina md:grid-cols-[auto_1fr] md:p-12">
-          <span className="label h-fit w-fit whitespace-nowrap rounded-full bg-bronze-deep px-3 py-1.5 text-white">In progress</span>
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
-            <p className="label text-verdigris">Experiment 001</p>
-            <h2 className="font-serif text-3xl md:text-4xl"><Lines text="Being built.|Revealing soon." /></h2>
-            <p className="max-w-2xl text-lg text-patina/75">We&apos;re building our first shared solution around a problem we keep seeing in day-to-day operations. Follow CodeDharma to see it take shape.</p>
+            <p className="label text-verdigris-deep">Our first product</p>
+            <h2 className="font-serif text-3xl md:text-4xl"><Lines text="Built for one household first." /></h2>
+            <p className="max-w-xl text-lg leading-relaxed text-oxide-80">Splizo started with one family&apos;s money spread across bank apps, UPI and a spreadsheet nobody updated. We built it for them first. Now it&apos;s opening to every household that has the same problem.</p>
           </div>
-        </article>
+          <ProductCard />
+        </div>
       </Section>
       <Section className="border-t border-line">
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between">
