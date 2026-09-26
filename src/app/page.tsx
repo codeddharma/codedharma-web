@@ -8,13 +8,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="px-5 pb-16 pt-14 md:pb-24 md:pt-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
           <div className="space-y-7">
             <p className="label text-verdigris-deep">{site.category}</p>
-            {/* On phones the tagline is sized to fit exactly two lines: "Technology," / "guided by purpose." */}
+            {/* Always two lines: "Technology," / "guided by purpose." Sizes in globals.css keep line 2 inside its column. */}
             <h1 className="font-serif leading-[1.06] hero-tagline">
-              <span className="block sm:inline">Technology, </span>
-              <span className="block whitespace-nowrap sm:inline sm:whitespace-normal">guided by purpose.</span>
+              <span className="block">Technology,</span>
+              <span className="block whitespace-nowrap">guided by purpose.</span>
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-oxide-80 md:text-xl">
               {site.descriptor} We spend time where the work happens, find what&apos;s slowing you down, and build only what moves you forward.

@@ -39,7 +39,9 @@ h1, h2, h3 { text-wrap: balance; }
 
 :focus-visible { outline: 2px solid var(--color-bronze); outline-offset: 3px; }
 
-/* Home hero tagline: on phones, sized so "guided by purpose." exactly fits one line (text is ~9.3em wide). */
+/* Home hero tagline, always two lines. "guided by purpose." is ~9.3em wide; each size keeps it inside its column. */
 .hero-tagline { font-size: clamp(1.75rem, calc((100vw - 44px) / 9.4), 3rem); }
 @media (min-width: 640px) { .hero-tagline { font-size: 3.75rem; } }
 @media (min-width: 768px) { .hero-tagline { font-size: 4.5rem; } }
+/* Side-by-side hero from 1024px: the text column is ~620px wide, so 4rem keeps "guided by purpose." on one line. */
+@media (min-width: 1024px) { .hero-tagline { font-size: 4rem; } }
