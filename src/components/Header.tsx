@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Lockup } from "./Logo";
+import { CloseIcon, MenuIcon } from "./Icons";
 import { nav, site } from "@/content/site";
 
 export function Header() {
@@ -32,12 +33,13 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="md:hidden rounded-md border border-line px-3 py-1.5 text-sm"
+          className="md:hidden rounded-md border border-line p-2"
           aria-expanded={open}
           aria-controls="mobile-nav"
+          aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? "Close" : "Menu"}
+          {open ? <CloseIcon /> : <MenuIcon />}
         </button>
       </div>
       {open && (

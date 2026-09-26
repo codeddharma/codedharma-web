@@ -22,7 +22,7 @@ export default function Page() {
       />
       <Section className="pt-6 md:pt-10">
         <div className="grid gap-12 lg:grid-cols-[auto_1fr]">
-          <div className="rounded-2xl bg-oxide p-10"><Mark className="h-44 w-auto" ink="#DCE6E0" /></div>
+          <Mark className="h-32 w-auto self-start justify-self-start md:h-44" ink="#1D2322" />
           <div className="space-y-6">
             <h2 className="font-serif text-3xl md:text-4xl">The name and the mark</h2>
             <p className="max-w-2xl text-lg leading-relaxed text-oxide-80">
@@ -52,15 +52,6 @@ export default function Page() {
               <p className="mt-2 text-[16px] leading-relaxed text-oxide-80">{v.body}</p>
             </div>
           ))}
-        </div>
-      </Section>
-      <Section>
-        <div className="max-w-3xl space-y-4">
-          <p className="label text-verdigris-deep">Founder</p>
-          <h2 className="font-serif text-3xl">Neel Shah</h2>
-          <p className="text-lg leading-relaxed text-oxide-80">
-            A senior full-stack engineer with more than five years of experience building web products, from customer-facing platforms to internal tools. Neel started CodeDharma to bring that engineering to businesses that usually can&apos;t access it, starting with a conversation about how the business actually runs.
-          </p>
         </div>
       </Section>
       <CtaBand />

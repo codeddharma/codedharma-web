@@ -15,7 +15,7 @@ export const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/codedharma" },
   { label: "Instagram", href: "https://www.instagram.com/codedharma._" },
   { label: "Facebook", href: "https://www.facebook.com/codedharma" },
-];
+] as const;
 
 export const nav = [
   { href: "/what-we-build", label: "What we build" },
